@@ -1,0 +1,63 @@
+Part 1: Discussion Questions
+
+RECURSION
+
+1. A function is recursive if, somewhere in its definition, it calls itself.
+
+2. It is necessary to have base case or else the function would recur endlessly
+and never return.
+
+GRAPHS
+
+1. A graph is a data structure composed of nodes and their connections
+("edges").
+
+2. A tree is actually a type of graph. Where trees are only directed and
+acyclic, graphs may be undirected or cyclic. While trees are hierarchical,
+graphs may not be.
+
+3. A good use of a graph is modeling social networks.
+
+PERFORMANCE OF DIFFERENT DATA STRUCTURES
+
+Data Structure          Index   Search  Add-R   Add-L   Pop-L   Pop-R
+Python List (Array)     O(1)    O(n)    O(1)    O(n)    O(n)    O(1)
+Linked List             O(n)    O(n)    O(1)    O(1)    O(1)    O(n)  # The tail doesn't know which node is prev.
+Doubly-Linked List      O(n)    O(n)    O(1)    O(1)    O(1)    O(1)     
+Queue (as Array)        X       X       O(1)    X       O(n)    X       
+Queue (as LL or DLL)    X       X       O(1)    X       O(1)    X
+Stack (as Array/LL/DLL) X       X       O(1)    X       X       O(1)
+Deque (as DLL)          X       X       O(1)    O(1)    O(1)    O(1)
+
+Data Structure          Get     Add     Delete  Iterate Memory
+Dictionary (Hash Map)   O(1)    O(1)    O(1)    O(n)    medium
+Set (Hash Map)          O(1)    O(1)    O(1)    O(n)    medium         
+Binary Search Tree      O(logn) O(n)    O(n)    O(1)    little            
+Tree                    O(n)    O(1)    O(1)    O(1)    little
+
+SORTING
+
+1. Bubble Sort works by swapping the largest element toward the right, so that
+after one pass, the largest element is rightmost in the array--but that's no 
+guarantee that the remainder is sorted; multiple passes are usually required.
+
+2. Merge Sort works by merging two already sorted lists into one sorted list. It
+gets its "already sorted lists" by recursively breaking the list to be sorted
+into halves, until there's lists that are only one element long (or empty); then
+it starts to merge these unitary (and definitionally sorted) lists into larger
+sorted lists.
+
+3. Quick Sort works by selecting a list element to "pivot" around and moving all
+elements that are less than the pivot to the left of the list, and all elements
+that are greater than the pivot to the right of the list. This results in a list
+that is semi- but not completely sorted; so quick sort is called recursively on
+the parts of the list on either side of the pivot, and on down until it reaches
+a base case.
+
+GIT BRANCHING
+
+1. A time when I might use git branching is when I have a working version of my
+project that I will demo on Career Day, but I also want to start refactoring it.
+
+2. A pull request is when I ask the person in charge of the project to look at
+my branch and decide whether/how to merge it into another branch.
